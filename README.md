@@ -30,9 +30,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
    - Select **Connect to Git**
    - Choose your GitHub repository
    - Configure build settings:
-     - **Framework preset**: Next.js (Static HTML Export)
+     - **Framework preset**: Next.js (on Pages)
      - **Build command**: `npm run build`
-     - **Build output directory**: `out`
+     - **Build output directory**: `.vercel/output/static`
      - **Root directory**: `/` (leave as default)
    - Click **Save and Deploy**
 
@@ -52,8 +52,13 @@ Open [http://localhost:3000](http://localhost:3000) to view the app.
 
 3. **Deploy**
    ```bash
+   npm run deploy
+   ```
+   
+   Or manually:
+   ```bash
    npm run build
-   wrangler pages deploy out
+   wrangler pages deploy .vercel/output/static
    ```
 
 ## Custom Domain
@@ -70,4 +75,4 @@ To add a custom domain:
 npm run build
 ```
 
-This creates a static export in the `out` directory, ready for deployment.
+This builds the Next.js app optimized for Cloudflare Pages using `next-on-pages`.

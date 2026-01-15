@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "next-on-pages build",
+    "deploy": "next-on-pages deploy"
   },
   "dependencies": {
-    "next": "^14.0.0",
+    "@cloudflare/next-on-pages": "^1.13.16",
+    "next": "^14.3.0-canary.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
